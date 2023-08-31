@@ -4,3 +4,6 @@ Python course AI
 """python
 print()
 """
+```
+print("Hej")
+```
