@@ -34,7 +34,7 @@ else:
 
 """
 angle1 = input("Lets chek if u have a right angle triangle! \nType the first angle: ")
-angle2 = input("Type the secund angle: ")
+angle2 = input("Type the second angle: ")
 angle3 = input("And finaly type the therd angle: ")
 angle1 = int(angle1)
 angle2 = int(angle2)
@@ -46,11 +46,12 @@ if total_angel == 180:
     else:
         print("U dont have a right angle triangle.")
 else:
-    print(f"Chek ur angels a triangle have the angel sum of 180* ur triangel have a sum of {total_angel}*")
+    print(f"Chek ur angels, a triangle have the angel sum of 180* ur triangel have a sum of {total_angel}*")
 """
 # Problem 4 and solution.
 # The information in the following table is stated in a medicine package. Also it is stated that for children weight is more important than age.
-#  ***Information To be put in the script: 
+# ***
+# Information To be put in the script: 
 # Adults & adolescent over 40KG > 12y 1-2 pills 
 # Children 26-40KG 7-12y 1/2-1pill 
 # Children 15-25KG 3-7y 1/2 pill
