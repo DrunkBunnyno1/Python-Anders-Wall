@@ -58,6 +58,7 @@ else:
 # ******************************
 # Let the user input an age and a weight, the program should recommend the number of pills for the user.
 
+"""
 age = input("We whil try to rekomend the righet doseged, Please input age of recipient: ")
 weight = input("Please input the weight of the recipient in KG: ")
 age = int(age)
@@ -79,11 +80,69 @@ if age >= 3 and weight >= 15:
         elif weight >= 30 and weight < 40:
             print("U can give the recipient 1 pill, consult a docktor.")
         elif weight >= 26 and weight < 30:
-            print (" U can give the recipient 1 pill, consult a doktor.")
+            print (" U can give the recipient 1/2 pill, if that dont work u can give 1/2 pill and consult a doktor.")
         elif weight >= 15 and weight <= 25:
             print("U can give recipient 1/2 pill")
 else:
     print("U shuld consult a doktor i cant rekomend u to give medicine")
+"""
+# Problem 5 and Solution
+# Let the user input a number. Check if the number is
+# 1. even or odd
+# 2. is divisible by 5
+# 3. is divisble by 5 and odd
+
+import math
+
+"""
+num1 = input("Enter a numbder. ")
+num2  = int(num1)
+if (num2 % 2) == 0:
+    print("Then number is evan.\n ")
+else:
+    print("The number is odd!\n ")
+if (num2 % 5) == 0:
+    print("And divisible by 5. ")
+else:
+    print("The number is not divisible by 5.")
+"""
+
+#problem 6 and solution
+# The maximum allowed luggage size for boarding an airplane is:
+# 1. weight: 8kg
+# 1. dimensions: 55x40x23cm (length x width x height)
+# Let the user input weight, length, width and height of the luggage. The program should check if the luggage is allowed or not.
+
+weight = int(input("Enter the luggage weighet in Kg:\n "))
+length = int(input("The luggage length in Cm?:\n "))
+width = int(input("The luggage width in Cm?:\n "))
+height = int(input("The luggage height in Cm?:\n "))
+weig = False # cahnge in If-satment line 126
+leng = False # cahnge in If-satment line 129
+widh = False # cahnge in If-satment line 132
+heig = False # cahnge in If-satment line 135
 
 
-
+if weight >= 1 and weight <= 8: # cheking i value weight is ok if not elif, line 144 or line 147
+    weig = True
+    print(f"Ur luggage weight is ok: {weight} kg")
+    if length >= 1 and length <= 55: # cheking i length
+        leng = True
+        print(f"Ur luggage length is ok: {length} cm")
+    if width >=1 and width <= 40: # cheking i value width
+        widh = True
+        print(f"Ur luggage width is ok: {width} cm")
+    if height >= 1 and height <= 23: # cheking i value height
+        heig = True
+        print(f"Ur luggage height is ok: {height} cm")
+    if leng == True and widh == True and heig == True: # Print if ale is true
+        print(f"The following criteria have been mett: \n weighet: {weig}\n length: {leng}\n width: {widh}\n height: {heig}")
+        print("U can bring ur luggage on the plane")
+    if leng == False or widh == False or heig == False: # Print if one is false
+        print(f"The following criteria not have been mett: \n weighet: {weig}\n length: {leng}\n width: {widh}\n height: {heig}")
+        print("U can`t bring ur luggage on the plane")
+elif weight < 1:
+    print("U`r transporting helium on an arplane in ur luggage!!!!")
+    print("Remove helium and try agen")
+elif weight > 8:
+    print("U hawe to remove items from ur luggage")
