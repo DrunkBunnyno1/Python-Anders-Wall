@@ -17,8 +17,9 @@ print(f"\nThe hypothenuse is {c} length units\n")
 # b
 c = 7
 a = 5
-b = math.sqrt((7**2)-(5**2))
+b = math.sqrt((c**2)-(a**2))
 print(f"\nThe other cathetus is {round(b,1)} length units\n")
+# print(f"{b:4}") more relevent solution
 
 # Problem 2 and soliton
 
@@ -27,10 +28,12 @@ A machine learning algorithm has been trained to predict whether or not it would
 Out of 365 predictions, it got 300 correct, compute the accuracy of this model.
 """
 
-a = 350
+a = 365
 b = 300
 c = (b / a) * 100
 print(f"\nThe AI predicted the whether {round(c,1)} precent of the time\n")
+# print(f"{c:1}")
+# accury = 300 // 365
 
 # Problem 3 and soliton
 
