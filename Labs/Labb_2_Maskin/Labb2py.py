@@ -1,38 +1,31 @@
 """with open("recorses\datapoints.csv" "r") as file:
     content = file.readlines()
     print(content)"""
-
-pocnon = []
+x = 0
+test1 = 0
+test2 = ""
 with open("Labs\\Labb_2_Maskin\\recorses\datapoints.csv", "r") as file:
-    pocnon = [file.read()]
-    for i in pocnon:
-        print(i)
+    pocnon = file.read()
+    """Dra ner i spilt[""\n] lägg i lista med split[,] apend to new list"""
+
 pocnon_pika = []
 poccnon_pich = []
+pocnon_list = pocnon.split("\n")
 
-for i in pocnon:
-    if pocnon:
-        if pocnon[::-1] == 1:
-            poccnon_pich.append(pocnon)
-        elif pocnon[::-1] == 0:
-            pocnon_pika.append(pocnon)
-for i in poccnon_pich:
-    print("pich")
-    print(i)
+for index, pokemon in enumerate(pocnon_list):
+    print(f"{index}: {pokemon}")
+for i in pocnon_list:
+    if i[-1] == "1":
+        pocnon_pika.append(i)
+        test1 = i
+    elif i[-1]== "0":
+        test2 = i
+        poccnon_pich.append(i)
+for index, pokemon in enumerate(poccnon_pich):
+    print(f"{index}: {pokemon}")
+print("\n")
+for index, pokemon in enumerate(pocnon_pika):
+    print(f"{index}: {pokemon}")
 
 
 
-    
-"""import csv
-
-pocnon = []
-
-with open("Labs\\Labb_2_Maskin\\recorses\datapoints.csv") as file:
-    reader = csv.DictReader(file)
-#print(reader)
-
-    for row in reader:
-        #print(row["width (cm)"])
-        pocnon.append({"width (cm)": row["width (cm)"], "height (cm)": row["height (cm)"],
-                          "label (0-pichu, 1-pikachu)": row["label (0-pichu, 1-pikachu)"]})
-print(pocnon)"""
