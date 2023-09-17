@@ -1,9 +1,10 @@
-import numpy as np
-import matplotlib.pyplot as plt
+# import matplotlib as plt
 
-x = 0
-test1 = 0
+a = 0
+b = 0
+test1 = []
 test2 = ""
+pokemon = ""
 with open("Labs\\Labb_2_Maskin\\recorses\datapoints.csv", "r") as file:
     pocnon = file.read()
     """Dra ner i spilt[""\n] lägg i lista med split[,] apend to new list"""
@@ -16,8 +17,8 @@ pich_y_axis = []
 pich_axis = []
 pich = []
 
-for index, pokemon in enumerate(pocnon_list):
-    print(f"{index}: {pokemon}")
+#for index, pokemon in enumerate(pocnon_list):
+#    print(f"{index}: {pokemon}")
 for i in pocnon_list:
     if i[-1] == "1":
         pocnon_pika.append(i)
@@ -25,29 +26,38 @@ for i in pocnon_list:
     elif i[-1]== "0":
         test2 = i
         pocnon_pich.append(i)
-for index, pokemon in enumerate(pocnon_pich):
-    print(f"{index}: {pokemon}")
-print("\n")
-for index, pokemon in enumerate(pocnon_pika):
-    print(f"{index}: {pokemon}")
 
 for i in pocnon_pich:
     pich.append(i.split(','))
 
-for index, pokemon in enumerate(pich):
-    print(f"{index}: {pokemon}")
-
-for index, pokemon in enumerate(pich):
-    print(f"{index}: {pokemon}")
 for i in pich:
-    del pich[x][2]
-    x += 1
-for index, pokemon in enumerate(pich):
+    del pich[a][2]
+    del pika
+    a += 1
+
+for i in pich:
+    pich_x_axis.append(pich[b][0])
+    b += 1
+b = 0
+for i in pich:
+    pich_y_axis.append(pich[b][1])
+    b += 1
+print("X: ")
+for index, pokemon in enumerate(pich_x_axis):
+    print(f"{index}: {pokemon}")
+print("Y: ")
+for index, pokemon in enumerate(pich_y_axis):
     print(f"{index}: {pokemon}")
 
-x, y = pich.T
+#for i in pich:
+#    pokemon = pokemon + i
+#pich_axis = pokemon.split(",")
+
+#for index, pokemon in enumerate(pokemon):
+#    print(f"{index}: {pokemon}")
+
+#test1 = [p.strip("'") for p in pich_axis]
   
-  
+#for index, pokemon in enumerate(pich_axis):
+#    print(f"{index}: {pokemon}")
 # plot our list in X,Y coordinates
-plt.scatter(x, y)
-plt.show()
