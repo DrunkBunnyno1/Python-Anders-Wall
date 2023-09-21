@@ -16,6 +16,7 @@ pich_x_axis = []
 pich_y_axis = []
 pich_axis = []
 pich = []
+pika = []
 
 #for index, pokemon in enumerate(pocnon_list):
 #    print(f"{index}: {pokemon}")
@@ -32,7 +33,7 @@ for i in pocnon_pich:
 
 for i in pich:
     del pich[a][2]
-    del pika
+    del pika[a][2]
     a += 1
 
 for i in pich:
